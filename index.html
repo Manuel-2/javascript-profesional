@@ -13,36 +13,15 @@
       <h1>PlatziMediaPlayer.js</h1>
       <p>An extensible media player.</p>
     </header>
-
+    
     <main class="container">
       <video class="movie" id="videoContent">
         <source src="./assets/BigBuckBunny.mp4" />
       </video>
-
+      
       <button id="controlButton">Play/Pause</button>
     </main>
-    <script>
-      const video = document.getElementById("videoContent");
-      const button = document.getElementById("controlButton");
-
-      class mediaPlayer {
-        constructor(config) {
-          this.media = config.el;
-        }
-        playVideo() {
-          if (this.media.paused) {
-            this.media.play();
-            return
-          }
-          this.media.pause();
-        }
-      }
-
-      const mediaController = new mediaPlayer({ el: video });
-
-      button.onclick = () => mediaController.playVideo();
-
-      
-    </script>
+    
+    <script src="/assets/index.js"></script>
   </body>
 </html>
